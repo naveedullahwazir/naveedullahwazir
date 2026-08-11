@@ -1,125 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Naveed Ullah Wazir — a second-year student at Hadaf Group of Colleges, currently based in Peshawar with permanent roots in Waziristan.">
-  <title>Naveed Ullah Wazir — profile</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #17202a;
-      line-height: 1.7;
-    }
-    .hero {
-      min-height: 48vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 60px 20px;
-      background: linear-gradient(135deg, #17202a, #34495e);
-      color: white;
-    }
-    .hero h1 {
-      margin: 0 0 10px;
-      font-size: clamp(2.2rem, 7vw, 4.5rem);
-      letter-spacing: 1px;
-    }
-    .hero p {
-      margin: 0;
-      font-size: 1.1rem;
-      opacity: .9;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Naveed Ullah Wazir — personal profile, soulful quotes and positive thoughts.">
+
+<title>Naveed Ullah Wazir — Profile</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17202a;
+    background: linear-gradient(
+        180deg,
+        #eef2f5 0%,
+        #f8f9fa 55%,
+        #eef2f5 100%
+    );
+    line-height: 1.75;
+}
+
+/* HERO */
+.hero {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(255,255,255,.12),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255,255,255,.10),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #101820,
+            #34495e
+        );
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(2.3rem, 8vw, 5rem);
+    letter-spacing: 1.5px;
+}
+
+.hero p {
+    margin: 0;
+    font-size: 1.12rem;
+    opacity: .88;
+}
+
+/* MAIN CARD */
+.card {
+    max-width: 880px;
+    margin: -65px auto 55px;
+    padding: 45px;
+
+    background: rgba(255,255,255,.96);
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 55px rgba(20,30,40,.13);
+}
+
+/* INTRO */
+.intro {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e9ed;
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-size: 1.85rem;
+    letter-spacing: .2px;
+}
+
+/* SECTIONS */
+.section {
+    margin-top: 48px;
+}
+
+/* QUOTES */
+.quote {
+    position: relative;
+    margin: 18px 0;
+    padding: 24px 26px 20px;
+
+    border-left: 4px solid #34495e;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #f8fafb,
+        #eef2f5
+    );
+
+    box-shadow:
+        0 5px 18px rgba(20,30,40,.05);
+}
+
+.quote-text {
+    margin: 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.author {
+    display: block;
+    margin-top: 10px;
+    color: #68737d;
+    font-size: .9rem;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* THOUGHTS */
+.thought {
+    margin: 15px 0;
+    padding: 18px 20px;
+
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #e4e8ec;
+
+    box-shadow:
+        0 5px 16px rgba(20,30,40,.045);
+}
+
+.thought strong {
+    display: block;
+    margin-bottom: 3px;
+
+    font-size: .78rem;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #68737d;
+}
+
+/* CLOSING */
+.closing {
+    margin-top: 48px;
+    padding: 28px;
+
+    text-align: center;
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #17202a,
+        #34495e
+    );
+
+    color: white;
+}
+
+.closing p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 28px 20px 35px;
+    color: #68737d;
+    font-size: .9rem;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+
     .card {
-      max-width: 850px;
-      margin: -55px auto 50px;
-      padding: 42px;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 12px 35px rgba(0,0,0,.12);
-      position: relative;
+        margin: -45px 14px 40px;
+        padding: 28px 22px;
     }
-    h2 { margin-top: 0; font-size: 1.8rem; }
-    .details {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin: 28px 0;
+
+    .hero {
+        min-height: 45vh;
+        padding: 55px 18px;
     }
-    .detail {
-      padding: 18px;
-      border: 1px solid #e4e7eb;
-      border-radius: 14px;
-    }
-    .label {
-      display: block;
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #68737d;
-      margin-bottom: 4px;
-    }
-    footer {
-      text-align: center;
-      padding: 25px;
-      color: #68737d;
-      font-size: .9rem;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
-  <header class="hero">
+
+<header class="hero">
+
     <div>
-      <h1>Naveed Ullah Wazir</h1>
-      <p>Student • Curious Mind • Future-focused</p>
-    </div>
-  </header>
 
-  <main class="card">
+        <h1>Naveed Ullah Wazir</h1>
+
+        <p>
+            Student • Curious Mind • Future-focused
+        </p>
+
+    </div>
+
+</header>
+
+
+<main class="card">
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
     <h2>About Naveed</h2>
+
     <p>
-      Naveed Ullah Wazir is a second-year student at Hadaf Group of Colleges,
-      currently based in Peshawar, with permanent roots in Waziristan.
+        Naveed Ullah Wazir is a second-year student
+        at Hadaf Group of Colleges, currently based
+        in Peshawar, with roots in Waziristan.
     </p>
 
     <p>
-      He is a thoughtful, ambitious, and intellectually curious individual
-      who values self-development, discipline, resilience, and purposeful
-      learning. He believes in staying true to his principles, learning from
-      experience, and consistently striving for personal excellence.
+        He is a thoughtful, ambitious, and intellectually
+        curious individual who values self-development,
+        discipline, resilience, and purposeful learning.
     </p>
 
     <p>
-      Naveed is recognized for his composed demeanor, independent mindset,
-      and unwavering determination to shape a meaningful and successful future.
+        Naveed believes in staying true to his principles,
+        learning from experience, and consistently
+        striving for personal excellence.
     </p>
 
-    <div class="details">
-      <div class="detail">
-        <span class="label">Education</span>
-        Second-year student
-      </div>
-      <div class="detail">
-        <span class="label">College</span>
-        Hadaf Group of Colleges
-      </div>
-      <div class="detail">
-        <span class="label">Currently based in</span>
-        Peshawar
-      </div>
-      <div class="detail">
-        <span class="label">Roots</span>
-        Waziristan
-      </div>
+</section>
+
+
+<!-- QUOTES -->
+
+<section class="section">
+
+    <h2>✨ Quotes</h2>
+
+
+    <div class="quote">
+
+        <p class="quote-text">
+            “Happiness becomes beautiful when you learn
+            to appreciate the little things.”
+        </p>
+
+        <span class="author">
+            — Naveed Ullah Wazir
+        </span>
+
     </div>
-  </main>
 
-  <footer>
+
+    <div class="quote">
+
+        <p class="quote-text">
+            “A peaceful heart can find something beautiful
+            even in an ordinary day.”
+        </p>
+
+        <span class="author">
+            — Naveed Ullah Wazir
+        </span>
+
+    </div>
+
+
+    <div class="quote">
+
+        <p class="quote-text">
+            “Life feels lighter when gratitude becomes
+            part of the way you see it.”
+        </p>
+
+        <span class="author">
+            — Naveed Ullah Wazir
+        </span>
+
+    </div>
+
+
+    <div class="quote">
+
+        <p class="quote-text">
+            “The best moments are often the ones we learn
+            to notice rather than chase.”
+        </p>
+
+        <span class="author">
+            — Anonymous
+        </span>
+
+    </div>
+
+
+    <div class="quote">
+
+        <p class="quote-text">
+            “Let your days be shaped by purpose,
+            kindness, and a little wonder.”
+        </p>
+
+        <span class="author">
+            — Anonymous
+        </span>
+
+    </div>
+
+</section>
+
+
+<!-- THOUGHTS -->
+
+<section class="section">
+
+    <h2>🌿 Thoughts</h2>
+
+
+    <div class="thought">
+
+        <strong>A Gentle Reminder</strong>
+
+        You do not need to have everything figured out
+        to appreciate where you are today.
+
+    </div>
+
+
+    <div class="thought">
+
+        <strong>Perspective</strong>
+
+        Sometimes a quiet evening, a good conversation,
+        or a simple smile is enough to make a day meaningful.
+
+    </div>
+
+
+    <div class="thought">
+
+        <strong>Growth</strong>
+
+        Becoming better does not always look dramatic;
+        sometimes it is simply choosing a better response
+        than yesterday.
+
+    </div>
+
+
+    <div class="thought">
+
+        <strong>Peace</strong>
+
+        Protecting your peace is not about avoiding life;
+        it is about learning what deserves your energy.
+
+    </div>
+
+
+    <div class="thought">
+
+        <strong>Life</strong>
+
+        Keep your mind curious, your heart grateful,
+        and your intentions genuine.
+
+    </div>
+
+</section>
+
+
+<!-- CLOSING -->
+
+<section class="closing">
+
+    <p>
+        “There is beauty in becoming —
+        one thoughtful day at a time.”
+    </p>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
     © 2026 Naveed Ullah Wazir
-  </footer>
+
+</footer>
+
+
 </body>
 </html>
